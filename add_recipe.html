@@ -1,0 +1,1 @@
+<h2>Add Recipe</h2><form method='post'>{% csrf_token %}<input name='recipe_name' placeholder='Recipe Name'>{% for i in ingredients %}{{ i.name }}<input type='number' step='0.1' name='qty_{{ i.id }}'><br>{% endfor %}<button type='submit'>Analyze</button></form>
